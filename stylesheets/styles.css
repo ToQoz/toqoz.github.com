@@ -21,24 +21,6 @@ a:visited {
   color:#222222;
 }
 
-dt {
-  height: 25px;
-  line-height: 25px;
-  vertical-align: middle;
-  float: left;
-}
-
-dd {
-  height: 25px;
-  line-height: 25px;
-  vertical-align: middle;
-}
-
-dd:before {
-  content: ":";
-  margin: 0 8px 0 0;
-}
-
 ul {
   padding: 0 0 0 20px;
 }
