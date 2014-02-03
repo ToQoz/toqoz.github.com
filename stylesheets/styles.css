@@ -41,7 +41,7 @@ li {
 
 .art {
   max-width: 286px; /* (600 / 2) - 10 - (2 * 2) */
-  float: left;
+  display: inline-block;
 }
 
 .art-title {
