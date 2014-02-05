@@ -1,8 +1,0 @@
-#!/bin/sh
-
-set -e
-
-data=$(curl "https://api.github.com/users/ToQoz/repos?type=public&per_page=100" 2> /dev/null)
-echo $data | jq 'map(select(.language == "Go"))' > data.json
-
-go run gen.go
