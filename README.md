@@ -6,5 +6,5 @@
 
 ## See Also
 
-http://toqoz.net
-http://github.com/ToQoz/gog
+- http://toqoz.net
+- http://github.com/ToQoz/gog
