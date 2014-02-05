@@ -40,7 +40,7 @@ li {
 /* /art */
 
 .art {
-  max-width: 286px; /* (600 / 2) - 10 - (2 * 2) */
+  max-width: 286px; /* (600 / 2) - 10 - (2 * 2) - 10 */
   display: inline-block;
 }
 
@@ -52,11 +52,14 @@ li {
 }
 
 .art-image {
-  max-width: 286px; /* (600 / 2) - 10 - (2 * 2) */
+  max-width: 276px; /* (600 / 2) - 10 - (2 * 2) - 10*/
   border: 2px solid rgba(0, 0, 0, 0);
   vertical-align: middle;
+  background-color: red;
+  margin-right: 10px;
 }
 
 .art-image:hover {
   border: 2px solid rgba(0, 0, 0, 1.0);
+  background: none;
 }
