@@ -19,7 +19,9 @@ function boost() {
   function _boost() {
     removeAll('iframe');
     removeAll('script', function(node) {
-      return node !== selfScriptTag && node.getAttribute('src').indexOf('pushdog') === -1;
+      var pushdog = 'src' in node && node.getAttribute('src').indexOf('pushdog') !== -1;
+      var self = node !== selfScriptTag;
+      return !self && !pushdog ;
     });
     boostCount += 1;
     console.log(boostCount);
