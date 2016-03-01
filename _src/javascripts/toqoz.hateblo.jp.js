@@ -15,12 +15,12 @@ function boost() {
   var selfScriptTag = document.currentScript;
   var boostCount = 0;
   _boost();
-  
+
   function _boost() {
     removeAll('iframe');
     removeAll('script', function(node) {
       var pushdog = 'src' in node && node.getAttribute('src').indexOf('pushdog') !== -1;
-      var self = node !== selfScriptTag;
+      var self = node === selfScriptTag;
       return !self && !pushdog ;
     });
     boostCount += 1;
