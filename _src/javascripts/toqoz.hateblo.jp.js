@@ -3,11 +3,12 @@ if (location.pathname === "/") {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-  toArray(document.querySelectorAll('.date')).forEach(function(date) {
-    var time = date.querySelector('time');
-    var link = date.querySelector('a');
-    date.removeChild(link);
-    date.appendChild(time);
+  replaceAll('.date a', function(link) {
+    return link.querySelector('time');
+  });
+
+  replaceAll('a.keyword', function(link) {
+    return link.childNodes[0];
   });
 });
 
@@ -30,6 +31,12 @@ function boost() {
       setTimeout(_boost, boostCount * 100);
     }
   }
+}
+
+function replaceAll(selector, fn) {
+  toArray(document.querySelectorAll(selector)).forEach(function(node) {
+    node.parentNode.replaceChild(fn(node), node);
+  });
 }
 
 function removeAll(selector, test) {
