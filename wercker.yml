@@ -1,4 +1,4 @@
-box: node
+box: golang
 build:
   steps:
     - script:
