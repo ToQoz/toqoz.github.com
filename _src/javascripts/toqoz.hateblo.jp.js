@@ -21,9 +21,12 @@ function boost() {
     removeAll('iframe');
     removeAll('script', function(node) {
       var src = node.getAttribute('src');
+
       var pushdog = src && src.indexOf('pushdog') !== -1;
+      var ga = node.id === "google-analytics-script";
       var self = node === selfScriptTag;
-      return !self && !pushdog ;
+
+      return !self && !pushdog && !ga;
     });
     boostCount += 1;
     console.log(boostCount);
