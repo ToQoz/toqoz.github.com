@@ -1,0 +1,14 @@
+box: node
+build:
+  steps:
+    - script:
+        name: build
+        code: |
+          go get github.com/toqoz/gog
+          gog build
+deploy:
+  steps:
+    - lukevivier/gh-pages@0.2.1:
+        token: $GIT_TOKEN
+        domain: toqoz.net
+        basedir: .
