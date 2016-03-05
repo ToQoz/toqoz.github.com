@@ -4,6 +4,7 @@ build:
     - script:
       name: install-jq
       code: |
+        apt-get update -qy
         apt-get install -qy jq
     - script:
       name: build
