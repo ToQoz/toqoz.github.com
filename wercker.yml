@@ -6,6 +6,11 @@ build:
         code: |
           go get github.com/toqoz/gog
           gog build
+    - script:
+        name: build go/pkg
+        code: |
+          cd go/pkg
+          ./gen
 deploy:
   steps:
     - lukevivier/gh-pages@0.2.1:
