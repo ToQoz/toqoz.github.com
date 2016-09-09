@@ -1,0 +1,31 @@
+#!/bin/sh
+
+set -e
+
+echo '
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>ToQoz.net</title>
+    <link href="/stylesheets/normalize.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="/stylesheets/styles.css" media="screen" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <h1>ToQoz.net</h1>
+    <section>
+      <h2>Golang package I created</h2>
+      <dl>
+' > index.html
+
+data=$(curl "https://api.github.com/users/ToQoz/repos?type=public&per_page=100" 2> /dev/null)
+echo $data |
+  jq 'map(select(.language == "Go"))' |
+  jq -r '.[] | "<dt><a href=\"" + .html_url + "\">" + .name + "</a></dt><dd><p>" + .description + "</p></dd>"' >> index.html
+
+echo '
+      </dl>
+    </section>
+  </body>
+</html>
+' >> index.html

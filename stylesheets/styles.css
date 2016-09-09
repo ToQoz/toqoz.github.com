@@ -1,0 +1,64 @@
+body {
+  font-size: 16px;
+  line-height: 1.5em;
+  width: 600px;
+  margin: 20px 10% 20px 20%;
+  padding: 0 0 0 10px;
+  color: #000000;
+  background-color: #FFF;
+  border-left: 3px solid #000000;
+}
+
+/* link */
+
+a {
+  color: #444444;
+}
+
+a:visited {
+  text-decoration:none;
+  color:#222222;
+}
+
+/* list */
+
+ul {
+  padding: 0 0 0 20px;
+}
+
+li {
+  margin-bottom: 4px;
+}
+
+/* container of float box element */
+
+.container {
+  overflow: hidden;
+}
+
+/* /art */
+
+.art {
+  max-width: 286px; /* (600 / 2) - 10 - (2 * 2) - 10 */
+  display: inline-block;
+}
+
+.art-title {
+  font-size: 14px;
+  font-weight: normal;
+  border-left: 2px solid #000;
+  padding-left: 5px;
+}
+
+.art-image {
+  max-width: 276px; /* (600 / 2) - 10 - (2 * 2) - 10*/
+  border: 2px solid rgba(0, 0, 0, 0);
+  vertical-align: middle;
+  background-color: red;
+  margin-right: 10px;
+}
+
+.art-image:hover {
+  border: 2px solid rgba(0, 0, 0, 1.0);
+  background: none;
+}

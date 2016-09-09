@@ -1,0 +1,151 @@
+/*
+  SCREEN SIZE
+    narrow ~ 360px
+    medium 361px ~ 1001px
+    wide   1001px ~
+*/
+
+body {
+  padding-top: 50px;
+  width: 100%;
+
+  font-size: 16px;
+  font-family: sans-serif;
+  word-break : break-all;
+  
+  background-color: #fcfcfb;
+}
+
+/* <hx> */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+  text-decoration: none;
+}
+
+/* <a> */
+a {
+  color:#454545
+}
+
+/* container */
+#container {
+  width: 100%;
+  padding: 0 10%;
+  box-sizing: border-box;
+
+  background-color: #fcfcfb;
+}
+@media screen and (min-width: 1001px) { /* wide */
+  #container {
+    width: 1000px;
+    margin: 0 auto;
+    padding: 0;
+  }
+}
+
+/* blog title */
+#blog-title-content {
+  margin-bottom: 3em;
+  text-align: center;
+}
+@media screen and (max-width:360px) { /* narrow */
+  #blog-title-content {
+    font-size: 0.7rem;
+  }
+}
+@media screen and (min-width:361px) and (max-width:640px) { /* medium */
+  #blog-title-content {
+    font-size: 0.8rem;
+  }
+}
+
+/* entry title */
+.entry-title {
+  font-size: 1.4rem;
+}
+
+/* date */
+.date {
+  font-size: 3em;
+}
+@media screen and (max-width:640px) { /* narrow and medium */
+  .date {
+    font-size: 2em;
+  }
+}
+.date a {
+  text-decoration: none;
+}
+
+/* code */
+pre, code {
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+
+  padding: 1em;
+  border: 1px solid #ccc;
+
+  background: #FFF;
+  box-shadow: none;
+}
+code {
+  font-family: 'Monaco', 'Consolas', 'Courier New', Courier, monospace, sans-serif;
+}
+.gist .markdown-body {
+  padding: 0 1em;
+}
+
+/* pager */
+.pager {
+  overflow: hidden;
+  margin-bottom: 1em;
+
+  font-size: 1.2rem;
+}
+.pager-prev {
+  float: left;
+}
+.pager-next {
+  float: right;
+}
+
+/* top-editarea */
+#top-editarea {
+  text-align: center;
+  margin-top: 3em;
+  margin-bottom: 3em;
+}
+
+/* bottom-editarea */
+#bottom-editarea {
+  margin-top: 3rem;
+  margin-bottom: 3em;
+  text-align: center;
+}
+#bottom-editarea .author .icon {
+  display: block;
+  width: 3rem;
+  margin: 0 auto 0.5rem auto;
+}
+#bottom-editarea .author .id {
+  font-size: 1rem;
+}
+
+/* hide header/footer/modules */
+#globalheader-container,
+#footer,
+.entries-access-ranking,
+.comment-box,
+.social-buttons,
+.google-afc-image,
+.google-afc-text
+{
+  display: none;
+}
+
+/* hide hatena star in index page */
+.page-index .hatena-star-container {
+  display: none;
+}

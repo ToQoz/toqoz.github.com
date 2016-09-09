@@ -1,0 +1,24 @@
+box: golang
+build:
+  steps:
+    - script:
+      name: install-jq
+      code: |
+        apt-get update -qy
+        apt-get install -qy jq
+    - script:
+      name: build
+      code: |
+        go get github.com/toqoz/gog
+        gog build
+    - script:
+      name: build go/pkg
+      code: |
+        cd go/pkg
+        ./gen
+deploy:
+  steps:
+    - lukevivier/gh-pages@0.2.1:
+      token: $GIT_TOKEN
+      domain: toqoz.net
+      basedir: .
